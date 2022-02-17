@@ -1,0 +1,27 @@
+html{
+    font-size: 70%;
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+  
+    .box-container .box{
+        flex-flow: column;
+    }
+  
+  }
+  
+  @media (max-width:500px){
+  
+    html{
+        font-size: 50%;
+    }
+  
+    .box-container-product .box-product .image-container .big-image img{
+        height: auto;
+        width: 100%;
+    }
+  }

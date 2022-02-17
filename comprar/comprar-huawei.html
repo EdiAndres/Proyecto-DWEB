@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
+
+</head>
+<body>
+    <div class="content-compras">
+    <header class="content-total">
+          <nav class="barra-navegacion">
+            <div class="logo">
+              <img src="../img/logos/logo-pear.png" alt="Pear Cell Shop Logo" />
+            </div>
+            <label for="btn" class="icon">
+              <span class="fa fa-bars"></span>
+            </label>
+            <input class="check" type="checkbox" id="btn" />
+            <ul class="menu">
+              <li><a href="../index.html">Inicio</a></li>
+              <li>
+                <a href="../quieroactualizar/actualizar.html">Actualizar mi Telefono</a>
+              </li>
+              <li>
+                <label for="btn-1" class="show">Productos</label>
+                <a href="#">Productos</a>
+                <input class="check" type="checkbox" id="btn-1" />
+                <ul class="submenu">
+                  <li><a href="../productos/samsung.html">Samsung</a></li>
+                  <li><a href="../productos/apple.html">Apple</a></li>
+                  <li><a href="../productos/xiaomi.html">Xiaomi</a></li>
+                  <li><a href="../productos/huawei.html">Huawei</a></li>
+                  <li><a href="../productos/articulos.html">Articulos</a></li>
+                </ul>
+              </li>
+              <li><a href="../serviciotecnico/servicio-tecnico.html">Servicio Tecnico</a></li>
+            </ul>
+          </nav>
+      </header>
+   
+<div class="box-container-product">
+
+    <div class="box-product">
+
+        <div class="image-container">
+
+            <div class="big-image">
+                <img src="../img/comprar/p50pro/p50dorado.png" alt="">
+            </div>
+
+            <div class="small-image">
+                <img class="active" src="../img/comprar/p50pro/p50dorado.png" alt="">
+                <img src="../img/comprar/p50pro/p50blanco.png" alt="">
+                <img src="../img/comprar/p50pro/p50negro.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="content">
+
+            <h3 class="title">Huawei P50 Pro</h3>
+            <div class="price-product">$/930,00</div>
+            <p>HUAWEI P50 Pro ofrece un rendimiento superior y supera los límites de la fotografía de los smartphones.</p>
+            <li>Sistema (SO): HarmonyOS 2.0</li>
+            <li>PANTALLA: 6,6 pulgadas - OLED</li>
+            <li>CPU Procesador: Snapdragon 888 4G</li>
+            <li>Memoria RAM: 8 - 12 GB</li>
+            <li>BATERÍA: 4360 mAh</li>
+            <form action="">
+
+                <div class="dropDown">
+                    <span> Color : </span>
+                    <select name="" id="">
+                        <option value="dorado">Dorado</option>
+                        <option value="blanco">Blanco</option>
+                        <option value="negro">Negro</option>
+                    </select>
+                    <span> Cpacidad : </span>
+                    <select name="" id="">
+                        <option value="128GB">128 GB</option>
+                        <option value="256GB">256 GB</option>
+                        <option value="512GB">512 GB</option>
+                    </select>
+                    <span> RAM : </span>
+                    <select name="" id="">
+                        <option value="8GB">8 GB</option>
+                        <option value="12GB">12 GB</option>
+                    </select>
+                </div>
+
+                <div class="quantity">
+                    <span> Cantidad : </span>
+                    <input type="number" value="1">
+                </div>
+
+            </form>
+
+            <a href="#"><button class="btn-product"> <i class="fas fa-shopping-cart"></i> Agregar al carrito </button></a>
+            <span class="stock"> <i class="fas fa-check"></i> Disponible </span>
+
+        </div>
+
+    </div>
+
+</div>  
+</div>
+
+<footer class="footer">
+    <div class="contenedor-footer">
+        <div class="contenedor-interno">
+            <figure>
+                <a href="#">
+                    <img src="../img/logos/logo-pear.png" alt="Logo de Pear Cell Shop">
+                </a>
+            </figure>
+        </div>
+        <div class="contenedor-interno">
+            <h4>SOBRE NOSOTROS</h4>
+            <ul>
+                <li><a href="../informacion/nosotros.html#terminos">Apartado Legal</a></li>
+                  <li><a href="../informacion/nosotros.html#preguntas">Preguntas Frecuentes</a></li>
+                  <li><a href="../informacion/nosotros.html#nosotros">Sobre Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="contenedor-interno">
+            <h4>SIGUENOS</h4>
+            <div class="links-redes">
+              <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/" target="blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="derechos">
+      © Copyright <b>PearShop S.A</b> -Todos los derechos reservados 2022
+    </div>
+</footer>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.small-image img').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        let image = $(this).attr('src');
+        $('.big-image img').attr('src',image);
+
+    });
+
+});
+
+</script>
+</body>
+</html>
